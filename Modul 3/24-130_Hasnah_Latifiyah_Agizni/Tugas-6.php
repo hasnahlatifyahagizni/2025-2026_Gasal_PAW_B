@@ -1,6 +1,6 @@
 <?php
 // nomor 1
-echo "<h3>2. Fungsi array_push()</h3>";
+echo "<h3>1. Fungsi array_push()</h3>";
 $fruits = ["apple", "banana", "cherry"];
 array_push($fruits, "orange", "mango"); 
 
