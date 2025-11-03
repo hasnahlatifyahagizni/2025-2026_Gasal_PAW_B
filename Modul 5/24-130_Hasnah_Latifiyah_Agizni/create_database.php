@@ -4,13 +4,16 @@ $username = "root";
 $password = "";
 $dbname = "mydb";
 
+// Koneksi ke MySQL
 $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) { die("Connection failed: " . mysqli_connect_error()); }
 
+// Membuat database
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 mysqli_query($conn, $sql);
 mysqli_select_db($conn, $dbname);
 
+// Membuat tabel suppliers
 $sql = "CREATE TABLE IF NOT EXISTS suppliers (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,

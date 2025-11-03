@@ -12,23 +12,22 @@ $alamat = $_POST['alamat'] ?? '';
 $errors = [];
 
 // VALIDASI
-validateName($errors, $_POST, 'nama');     // nama hanya huruf
-validatePhone($errors, $_POST, 'telp');    // telp hanya angka & simbol + - ( )
-validateNotEmpty($errors, $_POST, 'alamat'); // alamat wajib diisi
+validateName($errors, $_POST, 'nama');     
+validatePhone($errors, $_POST, 'telp');    
+validateNotEmpty($errors, $_POST, 'alamat'); 
 
-// Jika ada error → kembali ke form
+// Jika ada error kembali ke form
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
-    $_SESSION['old'] = $_POST;  // simpan input sebelumnya
+    $_SESSION['old'] = $_POST; 
     header("Location: create.php");
     exit;
 }
 
-// Jika lolos validasi → INSERT ke database
+// Jika lolos validasi INSERT ke database
 $query = "INSERT INTO suppliers (nama, telp, alamat) VALUES ('$nama', '$telp', '$alamat')";
 mysqli_query($conn, $query);
 
-// Kembali ke index
 header("Location: index.php");
 exit;
 ?>
