@@ -31,9 +31,7 @@ form { max-width: 500px; margin: 0 auto; }
 .form-row { display: flex; align-items: center; }
 label { width: 90px; font-size: 14px; }
 input[type="text"], input[type="tel"] { flex: 1; padding: 6px; font-size: 14px; }
-/* buat input telp & alamat agak panjang, tidak lurus dengan nama */
 input[name="telp"], input[name="alamat"] {width: 300px !important;flex: unset !important;}
-/* pesan error berada di bawah input */
 .error-text { color: red; font-size: 13px; margin-left: 90px; display: block;}
 .btn-group { display: flex; margin-left: 90px; margin-top: 10px; }
 .btn { padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px; }
